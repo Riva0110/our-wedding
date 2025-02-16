@@ -1,7 +1,11 @@
 import {
   Banner,
   GalleryWrap,
-  GalleryTitle,
+  WeddingTitle,
+  ThreeDesc,
+  LoveBottom,
+  LoveDesc,
+  UsTitle,
   Row,
   Post,
   Background,
@@ -132,15 +136,36 @@ const Gallery = () => {
       <Background />
       <Wrap>
         <Banner>
-          <h1>
-            Welcome to OUR WEDDING!
-            <br />
-            <span>love is love love is love love is love</span>
-          </h1>
           <Us />
+          <UsTitle />
+          <WeddingTitle />
+          <LoveDesc />
+          <LoveBottom />
+          <ThreeDesc>
+            <span>
+              <strong>實歲 33 歲</strong>
+              <br />
+              Lian Jing Huang
+            </span>
+            <br />
+            <br />
+            <span>
+              <strong>虛歲 33 歲</strong>
+              <br />
+              Tzu Hua Liao
+            </span>
+            <br />
+            <br />
+            <br />
+            <strong>
+              <span>姍姍來遲的彼此</span>
+              <br />
+              一起在 3 月 3 日<br />
+              下午 3 點結婚了
+            </strong>
+          </ThreeDesc>
         </Banner>
         <GalleryWrap>
-          {/* <GalleryTitle>Welcome to TzuHua & Riva’s wedding!</GalleryTitle> */}
           <div>
             <Row>
               {data1.map(({ imgUrl, message, from }, index) => (

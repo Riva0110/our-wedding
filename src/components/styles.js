@@ -1,5 +1,10 @@
 import styled from "styled-components";
+
 import blackUs from "../assets/blackUs.jpg";
+import usTitle from "../assets/banner-us.png";
+import weddingTitle from "../assets/banner-wedding.png";
+import loveDesc from "../assets/banner-love-desc.png";
+import loveBottom from "../assets/banner-love.png";
 import texture from "../assets/texture.png";
 
 export const Background = styled.div`
@@ -12,11 +17,6 @@ export const Background = styled.div`
   opacity: 0.6;
 `;
 
-export const GalleryTitle = styled.h2`
-  position: relative;
-  margin: 50px 0;
-`;
-
 export const Wrap = styled.div`
   max-height: 100vh;
   max-width: 100vw;
@@ -27,13 +27,13 @@ export const Banner = styled.div`
   position: relative;
 
   > h1 {
-    font-size: 46px;
+    font-size: 42px;
     position: absolute;
-    top: 60px;
+    top: 40px;
     left: 40px;
     text-align: left;
     > span {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 `;
@@ -41,7 +41,54 @@ export const Banner = styled.div`
 export const Us = styled.img`
   content: url(${blackUs});
   height: 100vh;
-  /* border-right: 2px solid black; */
+  border-right: 4px solid white;
+`;
+
+export const UsTitle = styled.img`
+  content: url(${usTitle});
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 45%;
+`;
+
+export const WeddingTitle = styled.img`
+  content: url(${weddingTitle});
+  position: absolute;
+  top: 36px;
+  right: 20px;
+  width: 50%;
+`;
+
+export const ThreeDesc = styled.div`
+  color: black;
+  position: absolute;
+  top: 28%;
+  right: 40px;
+  text-align: end;
+  font-size: 20px;
+  strong {
+    span {
+      color: white;
+    }
+  }
+`;
+
+export const LoveDesc = styled.img`
+  content: url(${loveDesc});
+  position: absolute;
+  top: 52%;
+  left: 20px;
+  width: 25%;
+`;
+
+export const LoveBottom = styled.img`
+  content: url(${loveBottom});
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
 `;
 
 export const GalleryWrap = styled.div`
@@ -53,13 +100,14 @@ export const GalleryWrap = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 60px;
+    gap: 40px;
     overflow: scroll;
     scrollbar-width: none;
     ::-webkit-scrollbar {
       display: none;
     }
     padding-left: 40px;
+    padding-right: 40px;gsa
   }
 `;
 
@@ -103,7 +151,11 @@ export const Post = styled.div`
     position: absolute;
     bottom: 10px;
     right: 16px;
+    white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: calc(100% - 28px);
+    text-align: end;
     border-radius: 16px;
     color: black;
     font-weight: bold;
